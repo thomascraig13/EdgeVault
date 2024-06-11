@@ -6,52 +6,58 @@ from logic import Solve
 values = ['circle','square','triangle']
 
 def buttoncommand():
-    if leftcirclevar == 1 and leftsquarevar == 1 and lefttrianglevar == 1:
+
+    if leftcirclevar.get() == 1 and leftsquarevar.get() == 1 and lefttrianglevar.get() == 1:
         pass
-    elif leftcirclevar == 1 and leftsquarevar == 1:
+    elif leftcirclevar.get() == 1 and leftsquarevar.get() == 1:
         leftWall = ['circle','square']
-    elif leftsquarevar == 1 and lefttrianglevar == 1:
+    elif leftsquarevar.get() == 1 and lefttrianglevar.get() == 1:
         leftWall = ['square','triangle']
-    elif leftcirclevar == 1 and lefttrianglevar == 1:
+    elif leftcirclevar.get() == 1 and lefttrianglevar.get() == 1:
         leftWall = ['circle','triangle']
-    elif leftcirclevar == 1: 
+    elif leftcirclevar.get() == 1: 
         leftWall = ['circle','circle']
-    elif leftsquarevar == 1: 
+    elif leftsquarevar.get() == 1: 
         leftWall = ['square','square']
     else:
         leftWall = ['triangle','triangle']
    
-    if midcirclevar == 1 and midsquarevar == 1 and midtrianglevar == 1:
+    if midcirclevar.get() == 1 and midsquarevar.get() == 1 and midtrianglevar.get() == 1:
         pass
-    elif midcirclevar == 1 and midsquarevar == 1:
+    elif midcirclevar.get() == 1 and midsquarevar.get() == 1:
         midWall = ['circle','square']
-    elif midsquarevar == 1 and midtrianglevar == 1:
+    elif midsquarevar.get() == 1 and midtrianglevar.get() == 1:
         midWall = ['square','triangle']
-    elif midcirclevar == 1 and midtrianglevar == 1:
+    elif midcirclevar.get() == 1 and midtrianglevar.get() == 1:
         midWall = ['circle','triangle']
-    elif midcirclevar == 1: 
+    elif midcirclevar.get() == 1: 
         midWall = ['circle','circle']
-    elif midsquarevar == 1: 
+    elif midsquarevar.get() == 1: 
         midWall = ['square','square']
     else:
         midWall = ['triangle','triangle']
 
-    if rightcirclevar == 1 and rightsquarevar == 1 and righttrianglevar == 1:
+    if rightcirclevar.get() == 1 and rightsquarevar.get() == 1 and righttrianglevar.get() == 1:
         pass
-    elif rightcirclevar == 1 and rightsquarevar == 1:
+    elif rightcirclevar.get() == 1 and rightsquarevar.get() == 1:
         rightWall = ['circle','square']
-    elif rightsquarevar == 1 and righttrianglevar == 1:
+    elif rightsquarevar.get() == 1 and righttrianglevar.get() == 1:
         rightWall = ['square','triangle']
-    elif rightcirclevar == 1 and righttrianglevar == 1:
+    elif rightcirclevar.get() == 1 and righttrianglevar.get() == 1:
         rightWall = ['circle','triangle']
-    elif rightcirclevar == 1: 
+    elif rightcirclevar.get() == 1: 
         rightWall = ['circle','circle']
-    elif rightsquarevar == 1: 
+    elif rightsquarevar.get() == 1: 
         rightWall = ['square','square']
     else:
         rightWall = ['triangle','triangle']
 
     callout = [calloutOne.get(), calloutTwo.get(), calloutThree.get()]
+
+    print(leftWall)
+    print(midWall)
+    print(rightWall)
+    print(callout)
 
     Solve(leftWall,midWall,rightWall,callout)
 
